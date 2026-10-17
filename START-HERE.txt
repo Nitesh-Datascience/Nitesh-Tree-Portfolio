@@ -1,0 +1,14 @@
+QUICK START
+
+1. Extract this ZIP.
+2. Open the Nitesh-Tree-Portfolio folder.
+3. Double-click index.html.
+
+ZIP ko extract karein, phir index.html par double-click karein.
+Kuch install karne ki zaroorat nahi hai.
+
+Move the cursor through the letters. Click a colorful fruit for project details.
+Use Send a little breeze to lift the letters.
+
+Edit projects.js to change your name and projects.
+For GitHub hosting, follow GITHUB-PAGES.md.

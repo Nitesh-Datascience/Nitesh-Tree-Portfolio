@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <meta name="description" content="Nitesh's interactive data analyst portfolio. Explore a garden of projects in Python, SQL, Excel, Power BI and machine learning.">
+  <meta property="og:title" content="Nitesh — A Garden of Insights">
+  <meta property="og:description" content="A little curiosity. A lot of possibility. Explore my data analytics projects, one branch at a time.">
+  <meta property="og:type" content="website">
+  <title>Nitesh — A Garden of Insights</title>
+  <link rel="icon" type="image/svg+xml" href="assets/sprout.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="projects.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to projects</a>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Nitesh, home"><span data-name>Nitesh</span><span class="wordmark-leaf" aria-hidden="true">✳</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" class="is-active" aria-current="location">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="contact-pill" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="garden-topline"><span class="edition">A LIVING PORTFOLIO</span><span class="garden-note"><span class="status-dot"></span> Always growing, always curious</span></div>
+      <div class="garden" id="garden">
+        <div class="garden-corner garden-corner-left" aria-hidden="true">a little curiosity.<br>a lot of possibility.</div>
+        <svg class="tree-art" id="tree-art" viewBox="0 0 1100 440" role="img" aria-labelledby="tree-title tree-description">
+          <title id="tree-title">A tree full of ideas</title>
+          <desc id="tree-description">An illustrated branching tree with colorful project fruits. Use the five project buttons or the project list below to explore.</desc>
+          <defs>
+            <filter id="ground-blur"><feGaussianBlur stdDeviation="7"/></filter>
+            <linearGradient id="trunk-ink" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#181e18"/><stop offset=".48" stop-color="#33372a"/><stop offset="1" stop-color="#171c18"/></linearGradient>
+          </defs>
+          <ellipse cx="550" cy="414" rx="112" ry="5" fill="#76816b" opacity=".13" filter="url(#ground-blur)"/>
+          <g id="tree-sway"><g transform="translate(-121 0) scale(1.22 1)"><g id="branches" aria-hidden="true"></g><g id="botanical-leaves" aria-hidden="true"></g></g></g>
+          <g class="ground-detail" aria-hidden="true"><path d="M492 413q57-7 117 0M534 415l-9 4m38-5 8 4"/><path d="M458 415q-3-10-9-7m9 7q1-12 7-14m174 14q2-10 8-12m-8 12q-2-6-7-7"/></g>
+        </svg>
+        <canvas id="leaves-canvas" aria-hidden="true"></canvas>
+        <div class="fruit-layer" id="fruit-layer" aria-label="Explore project branches"></div>
+        <div class="garden-corner garden-corner-right" aria-hidden="true"><span class="hand-arrow">⤶</span> pick a project</div>
+        <div class="garden-controls">
+          <button class="garden-button" id="wind-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a2 2 0 1 1-2 2M3 16h6a3 3 0 1 1-3 3"/></svg><span>Send a little breeze</span></button>
+          <button class="motion-button" id="motion-button" type="button" aria-pressed="false" aria-label="Pause garden animation"><span class="motion-icon" aria-hidden="true">Ⅱ</span><span class="motion-label">Pause</span></button>
+        </div>
+        <p class="garden-hint">Move your cursor. Follow your curiosity.</p>
+      </div>
+      <div class="hero-copy">
+        <p class="availability"><span class="tiny-sprout" aria-hidden="true">✳</span> ROOTED IN DATA. GROWING WITH CURIOSITY.</p>
+        <p class="hello">Hi, I’m <span data-name>Nitesh</span>.</p>
+        <h1 id="hero-heading">I turn data into insights that <em>grow.</em></h1>
+        <p class="hero-description" data-bio>I connect the dots between numbers and real decisions.<br>Python, SQL, Excel, Power BI — and a naturally curious mind.</p>
+        <a class="text-link hero-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-bottom"><span>DATA ANALYST &amp; CREATIVE PROBLEM SOLVER</span><a href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a><span>MADE OF QUESTIONS &amp; POSSIBILITIES</span></div>
+    </section>
+
+    <section class="work-section section-wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow"><span>01</span> SELECTED WORK</p><h2 id="work-title">Good things,<br><em>grown from data.</em></h2></div><p class="section-intro">A few projects from my little corner of the internet. Each begins with a question and grows into something useful.</p></div>
+      <div class="work-filter" role="group" aria-label="Filter projects"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All projects <span>04</span></button><button class="filter-button" type="button" data-filter="analytics" aria-pressed="false">Analytics</button><button class="filter-button" type="button" data-filter="machine-learning" aria-pressed="false">Machine learning</button></div>
+      <div class="project-grid" id="project-grid"></div>
+      <p class="work-footnote">More experiments are taking root. <a data-github href="https://github.com/Nitesh-Datascience" target="_blank" rel="noopener noreferrer">Find them on GitHub <span aria-hidden="true">↗</span></a></p>
+      <noscript><p>Enable JavaScript to explore the animated tree and project details. You can also <a href="https://github.com/Nitesh-Datascience">browse my projects on GitHub</a>.</p></noscript>
+    </section>
+
+    <section class="about-section section-wrap" id="about" aria-labelledby="about-title">
+      <div class="about-illustration" aria-hidden="true"><svg viewBox="0 0 300 310"><ellipse cx="150" cy="274" rx="78" ry="6" fill="#dce0cb"/><path d="M115 197h70l-11 72h-48z" fill="#d4a17e" stroke="#463c32" stroke-width="1.4"/><path d="M111 195h78v12h-78z" fill="#e3bb99" stroke="#463c32" stroke-width="1.4"/><path d="M150 195c-4-49 2-87-10-127m11 94c25-6 39-26 48-54m-48 26c-25-8-35-26-47-48" fill="none" stroke="#46553a" stroke-width="3"/><path d="M142 94c-31-1-45-24-41-44 25 0 41 19 41 44z" fill="#8b9b69"/><path d="M150 133c8-33 37-49 63-43-2 28-31 46-63 43z" fill="#b2bc86"/><path d="M148 167c-28-1-51-20-54-43 31-5 54 12 54 43z" fill="#6f8759"/><path d="M149 80c-10-27-3-47 15-64 15 24 9 47-15 64z" fill="#a3ae78"/><path d="m125 212 8 49m10-48 2 48m17-48-3 48m16-49-7 48" fill="none" stroke="#bd8b69" stroke-width="1"/><path d="M54 117h22m-11-11v22m177 52h15m-7-7v15" stroke="#c2a15b" stroke-width="1.3"/><circle cx="66" cy="204" r="3" fill="#a4ae81"/><path d="M219 58q5-8 10 0-5 10-10 0z" fill="none" stroke="#7b8762"/></svg><span class="handwritten">a work in progress,<br>just like all good things.</span></div>
+      <div class="about-copy"><p class="eyebrow"><span>02</span> THE PERSON BEHIND THE PROJECTS</p><h2 id="about-title">A curious mind.<br><em>A growing toolkit.</em></h2><p>I’m <span data-name>Nitesh</span>, a data analyst who enjoys making complex information feel clear. My work brings together analytics, machine learning and thoughtful visualization.</p><p>I like finding the story inside a messy dataset, asking one more question, and building something that makes the answer easier to understand.</p><div class="skills" aria-label="Skills"><span>Python</span><span>SQL</span><span>Excel</span><span>Power BI</span><span>AI &amp; ML</span><span>Data storytelling</span></div><a class="text-link" data-github href="https://github.com/Nitesh-Datascience" target="_blank" rel="noopener noreferrer">A peek at my GitHub <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="contact-section section-wrap" id="contact" aria-labelledby="contact-title"><p class="eyebrow"><span>03</span> SOMETHING NEW STARTS HERE</p><span class="contact-flower" aria-hidden="true">✳</span><h2 id="contact-title">Have a question?<br>Let’s <em>grow an idea.</em></h2><p>A project, an opportunity, or a conversation about data.<br>I’d love to see what we can make of it.</p><div class="contact-actions"><a class="primary-button" data-github href="https://github.com/Nitesh-Datascience" target="_blank" rel="noopener noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a><button class="secondary-button" id="copy-link" type="button">Copy portfolio link <span aria-hidden="true">⧉</span></button></div></section>
+  </main>
+  <footer class="site-footer"><a class="wordmark" href="#home"><span data-name>Nitesh</span><span class="wordmark-leaf" aria-hidden="true">✳</span></a><p>Planted with intention. Built with curiosity.</p><span>© <span id="year">2026</span> <span data-name>Nitesh</span></span><a href="#home" class="back-top">Back to the roots <span aria-hidden="true">↑</span></a></footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close project details">✕</button><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
